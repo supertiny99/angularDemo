@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap.css" />
+  <style>
+    .odd { background-color: lightcoral; }
+    .even { background-color: lavenderblush; }
+  </style>
 </head>
 <body>
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
@@ -12,12 +16,14 @@
     <table class="table">
       <thead>
         <tr>
+          <th>#</th>
           <th>活动名</th>
           <th>是否完成</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="item in todos">
+        <tr ng-repeat="item in todos" ng-class="$odd ? 'odd' : 'even'">
+          <td>{{$index + 1}}</td>
           <td ng-repeat="(key, value) in item">
             {{key}} = {{value}}
           </td>
