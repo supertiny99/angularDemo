@@ -9,14 +9,20 @@
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
     <h3 class="panel-header">To Do List</h3>
 
-    <div class="well">
-      <div>第一项：{{todos[0].action}}</div>
-    </div>
-
-    <div class="form-group well">
-      <label for="firstItem">设置第一项：</label>
-      <input name="firstItem" ng-model="todos[0].action" type="text" class="form-control" />
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>活动名</th>
+          <th>是否完成</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in todos">
+          <td>{{item.action}}</td>
+          <td>{{item.complete}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <script src="//cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
   <script src="index.js"></script>
