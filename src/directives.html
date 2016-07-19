@@ -24,9 +24,10 @@
       <tbody>
         <tr ng-repeat="item in todos" ng-class="$odd ? 'odd' : 'even'">
           <td>{{$index + 1}}</td>
-          <td ng-repeat="(key, value) in item">
-            {{key}} = {{value}}
+          <td>
+            {{item.action}}
           </td>
+          <td><span ng-if="$first || $last">{{item.complete}}</span></td>
         </tr>
       </tbody>
     </table>
