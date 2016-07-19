@@ -18,8 +18,7 @@
       </thead>
       <tbody>
         <tr ng-repeat="item in todos">
-          <td>{{item.action}}</td>
-          <td>{{item.complete}}</td>
+          <td ng-repeat="prop in item">{{prop}}</td>
         </tr>
       </tbody>
     </table>
