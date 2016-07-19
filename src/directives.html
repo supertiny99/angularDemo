@@ -12,25 +12,8 @@
 <body>
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
     <h3 class="panel-header">To Do List</h3>
+    <ng-include src="'table.html'"></ng-include>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>活动名</th>
-          <th>是否完成</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="item in todos" ng-class="$odd ? 'odd' : 'even'">
-          <td>{{$index + 1}}</td>
-          <td>
-            {{item.action}}
-          </td>
-          <td><span ng-if="$first || $last">{{item.complete}}</span></td>
-        </tr>
-      </tbody>
-    </table>
   </div>
   <script src="//cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
   <script src="index.js"></script>
