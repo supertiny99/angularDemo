@@ -18,7 +18,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="item in todos">
-          <td ng-repeat="prop in item">{{prop}}</td>
+          <td ng-repeat="(key, value) in item">
+            {{key}} = {{value}}
+          </td>
         </tr>
       </tbody>
     </table>
