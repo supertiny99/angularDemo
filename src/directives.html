@@ -9,14 +9,13 @@
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
     <h3 class="panel-header">To Do List</h3>
 
-    <div>共有{{todos.length}}个活动</div>
+    <div class="well">
+      <div>第一项：{{todos[0].action}}</div>
+    </div>
 
-    <div>共有<span data-ng-bind="todos.length"></span>个活动</div>
-
-    <div ng-bind-template=
-      "第一项: {{todos[0].action}}。第二项： {{todos[1].action}}"></div>
-    <div ng-non-bindable>
-      无法绑定：{{dotos[0].action}}
+    <div class="form-group well">
+      <label for="firstItem">设置第一项：</label>
+      <input name="firstItem" ng-model="todos[0].action" type="text" class="form-control" />
     </div>
   </div>
   <script src="//cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
