@@ -1,7 +1,6 @@
 angular.module('exampleApp', [])
   .controller('defaultCtrl', ($scope) => {
 
-    $scope.data = {};
 
     $scope.todos = [
       { action: '活动1', complete: false},
@@ -12,8 +11,14 @@ angular.module('exampleApp', [])
 
     $scope.buttonNames = ['Red', 'Green', 'Blue'];
 
-    $scope.settings = {
-      Rows: 'Red',
-      Columns: 'Green'
+    $scope.data = {
+      rowColor: 'Blue',
+      columnColor: 'Green',
     };
+
+    $scope.handleEvent = (e) => {
+      console.log('Event Type:' + e.type);
+      $scope.data.columnColor = e.type == 'mouseover' ? 'Green' : 'Blue';
+    };
+
   });
