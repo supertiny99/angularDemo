@@ -5,14 +5,19 @@
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap.css" />
   <style>
-    .odd { background-color: lightcoral; }
-    .even { background-color: lavenderblush; }
+    td > *:first-child { font-weight: bold; }
   </style>
 </head>
 <body>
 
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
     <h3 class="panel-header">To Do List</h3>
+    <div class="checkbox well">
+      <label>
+        <input type="checkbox" ng-model="todos[2].complete" />
+        事件3完成
+      </label>
+    </div>
 
     <table class="table">
       <thead>
@@ -26,7 +31,11 @@
       <tbody>
         <tr ng-repeat="item in todos">
           <td>{{$index +1}}</td>
-          <td ng-repeat="prop in item">{{prop}}</td>
+          <td>{{item.action}}</td>
+          <td>
+            <span ng-hide="item.complete">(未完成)</span>
+            <span ng-show="item.complete">(完成)</span>
+          </td>
         </tr>
       </tbody>
     </table>
