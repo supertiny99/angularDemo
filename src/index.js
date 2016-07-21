@@ -6,4 +6,7 @@ angular.module('exampleApp', [])
       { action: '活动3', complete: false},
       { action: '活动4', complete: true}
     ];
+    $scope.viewFile = () => {
+      return $scope.showList ? 'list.html' : 'table.html';
+    };
   });

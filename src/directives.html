@@ -12,7 +12,13 @@
 <body>
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
     <h3 class="panel-header">To Do List</h3>
-    <ng-include src="'table.html'"></ng-include>
+
+    <div class="well">
+      <div class="checkbox">
+        <label><input type="checkbox" ng-model="showList"/>切换</label>
+      </div>
+    </div>
+    <ng-include src="viewFile()"></ng-include>
 
   </div>
   <script src="//cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
