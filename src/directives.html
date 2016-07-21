@@ -36,10 +36,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="item in todos" ng-class="settings.Rows">
+        <tr ng-repeat="item in todos" ng-class-even="settings.Rows" ng-class-odd="settings.Columns">
           <td>{{$index +1}}</td>
           <td>{{item.action}}</td>
-          <td ng-style="{'background-color': settings.Columns}">
+          <td>
             {{item.complete}}
           </td>
         </tr>
