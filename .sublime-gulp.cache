@@ -1,0 +1,1 @@
+{"E:\\ch10\\gulpfile.js":{"sha1":"19708d88ceb210395427b7ba975e54c13564dc46","tasks":{"Convertjs":{"name":"Convertjs","dependencies":""},"Htmlmin":{"name":"Htmlmin","dependencies":""},"convertjsWatch":{"name":"convertjsWatch","dependencies":""},"htmlWatch":{"name":"htmlWatch","dependencies":""},"default":{"name":"default","dependencies":"convertjsWatch htmlWatch"}}}}
