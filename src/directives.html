@@ -13,9 +13,14 @@
 <body>
 
   <div id="todoPanel" class="panel" data-ng-controller="defaultCtrl">
-    <div class="well" tap="message = 'Tapped!'">
-      {{message}}
+    <div class="checkbox well">
+      <label>
+        <input type="checkbox" ng-model="dataValue" />
+        设置数据数值
+      </label>
     </div>
+
+    <button class="btn btn-success" ng-disabled="dataValue">我的按钮</button>
 
   </div>
   <script src="//cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
